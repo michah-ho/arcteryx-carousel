@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import {shallow} from 'enzyme';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+const wrapper = shallow(<App/>);
+
+describe("Does App Render correctly", () =>{
+  it("should render without crashing", ()=>{
+    const mockResponse = { img_url: "http://fake.com/donuts.jpg" };
+    fetch.mockResponseOnce(JSON.stringify(mockResponse));
+    expect(wrapper).toMatchSnapshot();
+  })
+})

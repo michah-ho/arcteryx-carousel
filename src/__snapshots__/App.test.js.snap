@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Does App Render correctly should render without crashing 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Arcteryx Carousel
+  </h1>
+</div>
+`;
