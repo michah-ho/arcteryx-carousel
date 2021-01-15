@@ -4,8 +4,8 @@ import Slider from "react-slick";
 const SlickSlider = function (props) {
   const { imageList, settings } = props;
 
-  if(!Array.isArray(imageList)){
-      return Fragment;
+  if(!Array.isArray(imageList) || Object.keys(settings).length === 0){
+      return <Fragment/>;
   }
   
   return (

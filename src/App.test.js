@@ -1,8 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import App from './App';
 import {shallow} from 'enzyme';
-
-
 
 describe("Does App Render correctly", () =>{
   

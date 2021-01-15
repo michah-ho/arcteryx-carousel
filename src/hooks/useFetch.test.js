@@ -13,11 +13,9 @@ describe("Tests for useFetch custom hook", () => {
     const mockUrl = "http:/fake.com";
     fetch.mockResponseOnce(JSON.stringify(mockResponse));
     const { result, waitForNextUpdate } = renderHook(() => useFetch(mockUrl));
-    let data = mockResponse.data
     const expectedData = { data: mockResponse.data};
     const expectedLoading = false;
     await waitForNextUpdate();
-    console.log("Wwaitt what?", result.current.state.data);
     expect(result.current.state.data).toEqual(expectedData);
     expect(result.current.state.loading).toEqual(expectedLoading);
   });
