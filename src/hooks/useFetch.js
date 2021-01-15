@@ -9,7 +9,7 @@ const useFetch = (url) => {
       const response = await fetch(url).then((res) => res.json());
       setState((prevState) => ({
         ...prevState,
-        data: response.data,
+        data: response,
         loading: false,
       }));
     };

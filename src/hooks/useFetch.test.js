@@ -1,5 +1,5 @@
 import useFetch from "./useFetch";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 
 describe("Tests for useFetch custom hook", () => {
   beforeEach(() => {
@@ -13,8 +13,12 @@ describe("Tests for useFetch custom hook", () => {
     const mockUrl = "http:/fake.com";
     fetch.mockResponseOnce(JSON.stringify(mockResponse));
     const { result, waitForNextUpdate } = renderHook(() => useFetch(mockUrl));
-    const expectedState = { data: mockResponse.data, loading: false };
+    let data = mockResponse.data
+    const expectedData = { data: mockResponse.data};
+    const expectedLoading = false;
     await waitForNextUpdate();
-    expect(result.current.state).toEqual(expectedState);
+    console.log("Wwaitt what?", result.current.state.data);
+    expect(result.current.state.data).toEqual(expectedData);
+    expect(result.current.state.loading).toEqual(expectedLoading);
   });
 });

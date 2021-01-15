@@ -7,5 +7,13 @@ exports[`Does App Render correctly should render without crashing 1`] = `
   <h1>
     Arcteryx Carousel
   </h1>
+  <SlickSlider
+    imageList={
+      Object {
+        "data": Object {},
+        "loading": false,
+      }
+    }
+  />
 </div>
 `;
