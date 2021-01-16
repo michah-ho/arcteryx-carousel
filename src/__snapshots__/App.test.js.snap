@@ -1,3 +1,418 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Does App Render correctly should render without crashing 1`] = `<Component />`;
+exports[`<App /> should render without crashing and match snapshot 1`] = `
+<App
+  fetchHook={[MockFunction]}
+>
+  <div
+    className="App"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="text-center"
+      >
+        Arcteryx Carousel
+      </h1>
+      <SlickSlider
+        imageList={
+          Array [
+            Object {
+              "alt_description": "This is a fake alt",
+              "id": "fakeID",
+              "urls": Object {
+                "regular": "http://fake.com/image.jpg",
+              },
+            },
+            Object {
+              "alt_description": "This is a fake alt",
+              "id": "fakeID2",
+              "urls": Object {
+                "regular": "http://fake.com/image2.jpg",
+              },
+            },
+            Object {
+              "alt_description": "This is a fake alt",
+              "id": "fakeID3",
+              "urls": Object {
+                "regular": "http://fake.com/image3.jpg",
+              },
+            },
+          ]
+        }
+        settings={
+          Object {
+            "dots": true,
+            "infinite": true,
+            "responsive": Array [
+              Object {
+                "breakpoint": 769,
+                "settings": Object {
+                  "adaptiveHeight": true,
+                  "arrows": false,
+                  "infinite": true,
+                  "slidesToShow": 1,
+                },
+              },
+            ],
+            "slidesToScroll": 1,
+            "slidesToShow": 6,
+            "speed": 500,
+            "variableWidth": true,
+          }
+        }
+      >
+        <div>
+          <Slider
+            dots={true}
+            infinite={true}
+            responsive={
+              Array [
+                Object {
+                  "breakpoint": 769,
+                  "settings": Object {
+                    "adaptiveHeight": true,
+                    "arrows": false,
+                    "infinite": true,
+                    "slidesToShow": 1,
+                  },
+                },
+              ]
+            }
+            slidesToScroll={1}
+            slidesToShow={6}
+            speed={500}
+            variableWidth={true}
+          >
+            <InnerSlider
+              accessibility={true}
+              adaptiveHeight={false}
+              afterChange={null}
+              appendDots={[Function]}
+              arrows={true}
+              autoplay={false}
+              autoplaySpeed={3000}
+              beforeChange={null}
+              centerMode={false}
+              centerPadding="50px"
+              className=""
+              cssEase="ease"
+              customPaging={[Function]}
+              dots={true}
+              dotsClass="slick-dots"
+              draggable={true}
+              easing="linear"
+              edgeFriction={0.35}
+              fade={false}
+              focusOnSelect={false}
+              infinite={true}
+              initialSlide={0}
+              lazyLoad={null}
+              nextArrow={null}
+              onEdge={null}
+              onInit={null}
+              onLazyLoadError={null}
+              onReInit={null}
+              pauseOnDotsHover={false}
+              pauseOnFocus={false}
+              pauseOnHover={true}
+              prevArrow={null}
+              responsive={
+                Array [
+                  Object {
+                    "breakpoint": 769,
+                    "settings": Object {
+                      "adaptiveHeight": true,
+                      "arrows": false,
+                      "infinite": true,
+                      "slidesToShow": 1,
+                    },
+                  },
+                ]
+              }
+              rows={1}
+              rtl={false}
+              slide="div"
+              slidesPerRow={1}
+              slidesToScroll={1}
+              slidesToShow={6}
+              speed={500}
+              swipe={true}
+              swipeEvent={null}
+              swipeToSlide={false}
+              touchMove={true}
+              touchThreshold={5}
+              unslick={true}
+              useCSS={true}
+              useTransform={true}
+              variableWidth={true}
+              vertical={false}
+              waitForAnimate={true}
+            >
+              <div
+                className="slick-slider slick-initialized"
+              >
+                <div
+                  className="slick-list"
+                >
+                  <Track
+                    centerMode={false}
+                    centerPadding="50px"
+                    cssEase="ease"
+                    currentSlide={0}
+                    fade={false}
+                    focusOnSelect={null}
+                    infinite={true}
+                    lazyLoad={null}
+                    lazyLoadedList={Array []}
+                    listHeight={0}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    rtl={false}
+                    slideCount={3}
+                    slideHeight={0}
+                    slideWidth={0}
+                    slidesToScroll={1}
+                    slidesToShow={6}
+                    speed={500}
+                    targetSlide={0}
+                    trackStyle={
+                      Object {
+                        "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                        "WebkitTransition": "",
+                        "msTransform": "translateX(0px)",
+                        "opacity": 1,
+                        "transform": "translate3d(0px, 0px, 0px)",
+                        "transition": "",
+                      }
+                    }
+                    unslick={true}
+                    useCSS={true}
+                    variableWidth={true}
+                    vertical={false}
+                  >
+                    <div
+                      className="slick-track"
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOver={[Function]}
+                      style={
+                        Object {
+                          "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                          "WebkitTransition": "",
+                          "msTransform": "translateX(0px)",
+                          "opacity": 1,
+                          "transform": "translate3d(0px, 0px, 0px)",
+                          "transition": "",
+                        }
+                      }
+                    >
+                      <div
+                        aria-hidden={false}
+                        className="slick-slide slick-active slick-current"
+                        data-index={0}
+                        key="original0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "outline": "none",
+                            "width": undefined,
+                          }
+                        }
+                        tabIndex="-1"
+                      >
+                        <div
+                          key="0"
+                        >
+                          <div
+                            key="0"
+                            style={
+                              Object {
+                                "display": "inline-block",
+                                "width": "100%",
+                              }
+                            }
+                            tabIndex={-1}
+                          >
+                            <img
+                              alt="This is a fake alt"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="slick-slide slick-active"
+                        data-index={1}
+                        key="original1"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "outline": "none",
+                            "width": undefined,
+                          }
+                        }
+                        tabIndex="-1"
+                      >
+                        <div
+                          key="11"
+                        >
+                          <div
+                            key="111"
+                            style={
+                              Object {
+                                "display": "inline-block",
+                                "width": "100%",
+                              }
+                            }
+                            tabIndex={-1}
+                          >
+                            <img
+                              alt="This is a fake alt"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="slick-slide slick-active"
+                        data-index={2}
+                        key="original2"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "outline": "none",
+                            "width": undefined,
+                          }
+                        }
+                        tabIndex="-1"
+                      >
+                        <div
+                          key="22"
+                        >
+                          <div
+                            key="222"
+                            style={
+                              Object {
+                                "display": "inline-block",
+                                "width": "100%",
+                              }
+                            }
+                            tabIndex={-1}
+                          >
+                            <img
+                              alt="This is a fake alt"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="slick-slide slick-active slick-cloned"
+                        data-index={3}
+                        key="postcloned0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "width": undefined,
+                          }
+                        }
+                        tabIndex="-1"
+                      >
+                        <div
+                          key="0"
+                        >
+                          <div
+                            key="0"
+                            style={
+                              Object {
+                                "display": "inline-block",
+                                "width": "100%",
+                              }
+                            }
+                            tabIndex={-1}
+                          >
+                            <img
+                              alt="This is a fake alt"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="slick-slide slick-active slick-cloned"
+                        data-index={4}
+                        key="postcloned1"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "width": undefined,
+                          }
+                        }
+                        tabIndex="-1"
+                      >
+                        <div
+                          key="11"
+                        >
+                          <div
+                            key="111"
+                            style={
+                              Object {
+                                "display": "inline-block",
+                                "width": "100%",
+                              }
+                            }
+                            tabIndex={-1}
+                          >
+                            <img
+                              alt="This is a fake alt"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="slick-slide slick-active slick-cloned"
+                        data-index={5}
+                        key="postcloned2"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "width": undefined,
+                          }
+                        }
+                        tabIndex="-1"
+                      >
+                        <div
+                          key="22"
+                        >
+                          <div
+                            key="222"
+                            style={
+                              Object {
+                                "display": "inline-block",
+                                "width": "100%",
+                              }
+                            }
+                            tabIndex={-1}
+                          >
+                            <img
+                              alt="This is a fake alt"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Track>
+                </div>
+              </div>
+            </InnerSlider>
+          </Slider>
+        </div>
+      </SlickSlider>
+    </div>
+  </div>
+</App>
+`;

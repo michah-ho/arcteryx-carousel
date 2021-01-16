@@ -1,13 +1,13 @@
 import { Fragment } from "react";
 import "./App.css";
-import useFetch from "./hooks/useFetch";
 import variables from "./config/variables";
 import SlickSlider from "./components/slick-slider/SlickSlider";
 
-function App() {
+function App(props) {
+  const {fetchHook} = props;
   const { secret_key } = variables;
   const url = `https://api.unsplash.com/photos/?page=1&client_id=${secret_key}`;
-  const { state } = useFetch(url);
+  const { state } = fetchHook(url);
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -28,11 +28,13 @@ function App() {
     ]
   };
 
+  //write a test for this
   if (state.loading) {
     return <div> Loading data...</div>;
   }
-  if(!Array.isArray(state.data)){
-    return Fragment;
+  //return a message and write a test for it
+  if(!Array.isArray(state.data) || state.data.length < 1){
+    return <div> Sorry there are no images to display</div>;
   }
   return (
     <div className="App">

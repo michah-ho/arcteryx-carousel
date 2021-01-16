@@ -1,6 +1,6 @@
 import React from "react";
 import SlickSlider from "./SlickSlider";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 
 describe("<SlickSlider>", () => {
   it("Should render when all good props are passed in to component", () => {
@@ -34,22 +34,9 @@ describe("<SlickSlider>", () => {
         alt_description: "This is a fake alt",
       },
     ];
-    const wrapper = shallow(
+    const wrapper = mount(
       <SlickSlider settings={mockSettings} imageList={mockImageList} />
     );
     expect(wrapper.find("Slider").length).toEqual(1);
-  });
-  it("Should not crash when passed an empty array", () => {
-    const mockImageList = [];
-    const mockSettings = {
-      dots: true,
-      infinite: true,
-    };
-    shallow(<SlickSlider settings={mockSettings} imageList={mockImageList} />);
-  });
-  it("Should not crash when passed an empty object", () => {
-    const mockImageList = [1, 2, 3];
-    const mockSettings = {};
-    shallow(<SlickSlider settings={mockSettings} imageList={mockImageList} />);
   });
 });
