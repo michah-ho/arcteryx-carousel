@@ -7,7 +7,7 @@ function App(props) {
   const {fetchHook} = props;
   const { secret_key } = variables;
   const url = `https://api.unsplash.com/photos/?page=1&client_id=${secret_key}`;
-  const { state } = fetchHook(url);
+  const { state, errState } = fetchHook(url);
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -28,11 +28,13 @@ function App(props) {
     ]
   };
 
-  //write a test for this
   if (state.loading) {
     return <div> Loading data...</div>;
   }
-  //return a message and write a test for it
+  if (errState){
+    return <div>{errState}</div>
+  }
+
   if(!Array.isArray(state.data) || state.data.length < 1){
     return <div> Sorry there are no images to display</div>;
   }

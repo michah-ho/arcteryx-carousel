@@ -3,7 +3,6 @@ import App from "./App";
 import { mount, shallow } from "enzyme";
 
 describe("<App />", () => {
-  //set up good fake props
   const mockImageList = [
     {
       id: "fakeID",
@@ -35,7 +34,6 @@ describe("<App />", () => {
     setState: jest.fn()
   }
   const mockUseFetch = jest.fn().mockReturnValue(mockReturn);
-  // good one
   const wrapper = mount(<App fetchHook={mockUseFetch} />);
 
   it("should render without crashing and match snapshot", () => {
@@ -54,6 +52,7 @@ describe("<App />", () => {
     const wrapper2 = shallow(<App fetchHook={mockUseFetchLoading} />);
     expect(wrapper2.find("div").text()).toEqual(" Loading data...");
   });
+
   it("Should display a sorry message when there are no items in the array", () => {
     const mockEmptyDataState = {
       state: {
@@ -66,5 +65,19 @@ describe("<App />", () => {
     const mockUseFetchEmptyData = jest.fn().mockReturnValue(mockEmptyDataState);
     const wrapper3 = shallow(<App fetchHook={mockUseFetchEmptyData} />);
     expect(wrapper3.find("div").text()).toEqual(" Sorry there are no images to display");
+  });
+
+  it("Should display the error when API is down", () => {
+    const mockAPIError = {
+      state: {
+        data: [],
+        loading: false,
+      },
+      errState: "API is down",
+      setState: jest.fn()
+    };
+    const mockUseFetchEmptyData = jest.fn().mockReturnValue(mockAPIError);
+    const wrapper4 = shallow(<App fetchHook={mockUseFetchEmptyData} />);
+    expect(wrapper4.find("div").text()).toEqual("API is down");
   });
 });
