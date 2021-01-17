@@ -1,0 +1,19 @@
+/*Slick Slider Overrides*/
+.slick-prev:before, .slick-next:before {
+    color: #000;
+  }
+  
+  .slick-track {
+    display: flex !important;
+  }
+  .slick-slide {
+    height: auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 30px;
+  }
+  .slick-slide img{
+    max-width:100%;
+  }
+  

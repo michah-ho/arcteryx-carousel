@@ -1,12 +1,11 @@
-import { Fragment } from "react";
 import "./App.css";
 import variables from "./config/variables";
 import SlickSlider from "./components/slick-slider/SlickSlider";
 
 function App(props) {
   const {fetchHook} = props;
-  const { secret_key } = variables;
-  const url = `https://api.unsplash.com/photos/?page=1&client_id=${secret_key}`;
+  const { img_api_url, secret_key } = variables;
+  const url = `${img_api_url}/?page=1&client_id=${secret_key}`;
   const { state, errState } = fetchHook(url);
   const sliderSettings = {
     dots: true,
